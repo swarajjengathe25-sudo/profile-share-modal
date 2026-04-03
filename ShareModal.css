@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.circle1 {
+    position: fixed;
+    top: 5%;
+    left: 30%;
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641 );
+    animation: circleAnimate 15s infinite;
+}
+
+@keyframes circleAnimate {
+    50% {
+        left: 33%;
+        top: 4%;
+        scale: 1.11%;
+    }
+}
+/* 34 */
+
+/* 102 */
+
+.btn-follow {
+    text-transform: capitalize;
+    width: 150px;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border:  2px solid #ffffffb9;
+    border-radius: 4px;
+    color:#ffffffb9;
+    cursor: pointer;
+    transition:  all 0.5s;
+}
+.btn-card:hover {
+    background: #ffffffb9;
+    color: #131313;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 500px;
+    scale: 0;
+    background: #00000088;
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+.modal-header{
+    display: flex;
+    margin-bottom: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+}
+/* 142 */
+
+/* 197 */
+#instragram:hover {
+    background-color: #cb2770;
+    color: #fff;
+}
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+    }
+
+#whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+}    
+
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+}
+
+#telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
+}
+
+.active {
+    scale:  1;
+}
+
+.overlay {
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+
+.overlayactive {
+    opacity: 1;
+    pointer-events: initial;
+
+}
+
+@media (max-width: 85px) {
+    .card-wrapper {
+        max-width: 250px;
+        width: 300px;
+    }
+    .bottom-group {
+        flex-direction: column;
+    }
+    .modal {
+        width: 70bw;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-wrapper {
+        position: static;
+        top: 0;
+        left: 0;
+        translate: 0 0;
+        margin: 0 12px;
+        padding: 0 10px;
+    background: #00000088;
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    border: 1px solid #ffffff30;        
+    }
+.card-wrapper div img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.user-name h2 {
+    font-size: 1.3rem;
+}
+.modal {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.modal + div + h3 {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: none;
+    z-index: 2;
+}
+/* icon container */
+.icon-container {
+    position: fixed;
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    gap: 15px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;    
+}
+.icon {
+    width: 45px;
+    height: 45px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+}
+/* hover colors */
+#Facebook:hover {
+    background: #1877f2;
+}
+#twitter:hover {
+    background: #1da1f2;
+}
+#instagram:hover {
+    background: #cb2770;
+}
+#whatsapp:hover {
+    background: #25d366;
+}
+#telegram:hover {
+    background: #0088cc;
+}
+
+
+/* show when modal active */
+.active ~ h3,
+.active ~ .icon-container {
+    display: flex;
+}
+
+
+/* 275 */
+/* Card Styling */
+.card-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: #00000088;
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    border: 1px solid #ffffff30;
+}
+
+.card-wrapper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.user-name h2 {
+    margin-top: 10px;
+}
+
+.designation h3 {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.bottom-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-card {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+
+/* Share button */
+.btn-share {
+    background: #ffffff20;
+    border: 1px solid #ffffff50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
