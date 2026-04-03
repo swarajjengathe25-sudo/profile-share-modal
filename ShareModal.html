@@ -1,0 +1,92 @@
+<!-- share model ki observation -->
+ <!-- do circle move ho rhe hai - animations (keyFrame, positions) translate movement
+  backround black
+  dono circle ki boundary pe blur aa rha hai-border-radius us ekiya hai fir blurr ke liye oapacity me shadow changes
+  card-me image isme heading isme button 
+  button me hover se backround color change 
+  button me share my profile pe modal change hota hai vha pe javascript use hogi--open modal function call by JS
+  CSS prperty change - cssText, (.) ,classList, className, setAttribute,  ye property use hoti hai css change krne ke ;iye using JS
+  -->
+
+  <!-- ek div usme width, height 100%, ovrflow nhi,  fir center me items , flex
+   circle- position-absolute , aur dusar bhi cirle
+   ek card -uska bhi div  -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile share Modal | Swaraj</title>
+    <link rel="shortcut icon" href="./assets/favicon" type="image/x-icon">
+    <link rel="stylesheet" href="./ShareModal.css">
+   </head>
+   <body>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <div class="wrapper">
+        <div class="card-wrapper">
+            <div>
+                <img src="kkp.png" alt="user" />
+            </div>
+            <div class="user-name">
+                <h2>Swaraj Jengathe</h2>
+            </div>
+            <div class="designation">
+                <h3>Programmer, Problem Solver</h3>
+            </div>
+            <div class="bottom-group">
+                <button onclick="openModal()" class="btn-share btn-card">
+                    <i class="fa-solid fa-share"></i>
+                    <div>Share my profile</div>
+                </button>
+
+                <button class="btn-follow btn-card">Follow me</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Component -->
+     <div class="modal">
+        <div class="modal-header">-
+
+            <h1>Share my Profile</h1>
+     </div>
+     <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
+     </div>
+    </div>
+
+    <div></div>
+
+        <h3>Share this via</h3>
+        <div class="icon-container">
+            <a href="#" class="icon" id="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="icon" id="twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="icon" id="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            
+            <a href="#" class="icon" id="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="#" class="icon" id="telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </a>            
+        </div>
+
+        <div>
+
+
+        </div>
+        <!-- Overlay -->
+         <div class="overlay" onclick="closeModal()"></div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+         <script src="ShareModal.js"></script>
+   </body>
+   </html>
